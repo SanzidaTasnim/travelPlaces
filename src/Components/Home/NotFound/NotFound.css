@@ -1,0 +1,8 @@
+.notFoundStyle{
+   background-image: url(./../../../images/notFound.png);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   height: 100vh;
+   width: 100vw;
+}
