@@ -1,14 +1,17 @@
-import React from "react";
+import {React , useContext} from "react";
 import { Link } from "react-router-dom";
 import logo from "./../../../images/logo.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagento } from "@fortawesome/free-brands-svg-icons";
 import "./Nav.css";
+import { MyContext } from "../../../App";
 
 library.add(faMagento);
 
 const Nav = ({ color, img }) => {
+  const [loggedIn, setLoggedIn, name, setName] = useContext(MyContext);
+  console.log('name',name);
   return (
     <div className="container">
       <nav className="navbar navbar-expand-lg">
@@ -77,7 +80,27 @@ const Nav = ({ color, img }) => {
                   Contact
                 </Link>
               </li>
-              <button className="btn btn-warning">Login</button>
+              {loggedIn ? (
+                <h5>
+                  <span style={{ color: "orange" }}> | </span>
+                  Welcome, {name}
+                </h5>
+              ) : (
+                <>
+                  <Link
+                    style={{ textDecoration: "none", color: "white" }}
+                    to="/auth"
+                  >
+                    <button
+                      className="btn"
+                      style={{ background: "orange", color: "white" }}
+                    >
+                      Login
+                    </button>
+                  </Link>
+                </>
+              )}
+              {/* <button className="btn btn-warning">Login</button> */}
             </ul>
           </div>
         </div>

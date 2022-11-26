@@ -6,7 +6,7 @@ import { travelPlace } from "./../../../travelInfo";
 import "./Main.css";
 
 const Main = () => {
-  const [area] = useContext(MyContext);
+  const [area, setArea] = useContext(MyContext);
   return (
     <div className="row container m-auto text-white position-relative mt-5 pt-5">
       <div className="col-md-4 main-text">

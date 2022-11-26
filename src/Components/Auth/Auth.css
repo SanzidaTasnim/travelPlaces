@@ -1,0 +1,13 @@
+.auth-margin{
+   padding-top: 50px;
+}
+.auth-form{
+   background-color: white;
+   border: 1px solid #d3d3d3;
+   padding: 20px 40px;
+   border-radius: 10px;
+   box-shadow: 2px 2px 10px #d3d3d3;
+}
+.auth-form h3{
+   padding-bottom: 8px;
+}
